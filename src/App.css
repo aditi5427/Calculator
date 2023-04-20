@@ -1,38 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2a2a2a;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator {
+    padding: 10px;
+    background: #989898;
+    max-height: fit-content;
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display {
+    color: white;
+    border: 2px solid rgb(98, 98, 98);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background: #505050;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display span {
+    color: white !important;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(93, 93, 93);
 }
 
-.App-link {
-  color: #61dafb;
+.output {
+    grid-column: 1/ -1;
+    background-color: rgb(98, 98, 98);
+    border: 1px solid rgb(113, 113, 113);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    font-size: 20px;
+    padding: 18px 20px;
+    /* border-radius: 5px; */
+    color: white;
+    background-color: rgb(98, 98, 98);
+    border: 1px solid rgb(67, 66, 66);
+}
+
+button:hover {
+    background: #6e6e6e;
+    color: white;
+}
+
+.operator {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+.operator button {
+    background: #da4c4c;
+    font-weight: bold;
+    flex: 1 1 0%;
+    color: rgb(255, 255, 255);
+    border: 1px solid #e72121;
+}
+
+.operator button:hover {
+    background: #d65c5c;
+}
+
+.digit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digit button {
+    flex: 1 1 33%;
+    max-width: 33%;
 }
