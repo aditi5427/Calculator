@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import Button from './Button';
 
 function App() {
     const [calc, setCalc] = useState("");
